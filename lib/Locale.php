@@ -191,7 +191,7 @@ class Locale extends AbstractSectionCollection
 	}
 
 	/**
-	 * @param string $source
+	 * @param object $source
 	 *
 	 * @return array|null
 	 */
@@ -218,7 +218,7 @@ class Locale extends AbstractSectionCollection
 	/**
 	 * Formats a number using {@link $number_formatter}.
 	 *
-	 * @param number $number
+	 * @param int|float $number
 	 * @param string|null $pattern
 	 * @param array $symbols
 	 *
@@ -232,7 +232,7 @@ class Locale extends AbstractSectionCollection
 	}
 
 	/**
-	 * @param number $number
+	 * @param int|float $number
 	 * @param string|null $pattern
 	 * @param array $symbols
 	 *
@@ -252,7 +252,7 @@ class Locale extends AbstractSectionCollection
 	/**
 	 * Formats currency using localized conventions.
 	 *
-	 * @param number $number
+	 * @param int|float $number
 	 * @param Currency|string $currency
 	 * @param string $pattern
 	 * @param array $symbols

@@ -389,7 +389,7 @@ echo $calendar->time_formatter->format($datetime, 'long');     // 20:12:22 UTC
 ## Dates and Times
 
 Calendars provide a formatter for dates and times. A width, a skeleton or a pattern can be
-used for the formatting. The datetime can be specified as an Unix timestamp, a string or a 
+used for the formatting. The datetime can be specified as an Unix timestamp, a string or a
 `DateTime` instance.
 
 ```php
@@ -475,7 +475,7 @@ echo $formatter($datetime, $formatter::WIDTH_SHORT);  // 9:22 PM
 ### Localized DateTime
 
 `DateTime` can be localized by wrapping them inside a [LocalizedDateTime][] instance, or by using
-the `localize` method of the desired locale: 
+the `localize` method of the desired locale:
 
 ```php
 <?php
@@ -920,7 +920,7 @@ $repository->plurals->rule_for(2, 'ar');   // two
 
 ## Requirements
 
-The package requires PHP 5.6 or later, and the [cURL extension](http://www.php.net/manual/en/book.curl.php).
+The package requires PHP 7.1 or later, and the [cURL extension](http://www.php.net/manual/en/book.curl.php).
 
 
 

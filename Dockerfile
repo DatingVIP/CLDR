@@ -1,7 +1,8 @@
-FROM php:5.6-alpine
+FROM php:7.1-alpine
 
 RUN apk add --update --no-cache make $PHPIZE_DEPS && \
-	pecl install redis xdebug-2.5.5 && \
+	pecl install redis && \
+	pecl install xdebug && \
 	docker-php-ext-enable redis xdebug
 
 RUN echo $'\

@@ -11,7 +11,11 @@
 
 namespace ICanBoogie\CLDR;
 
-class SupplementalTest extends \PHPUnit\Framework\TestCase
+use ICanBoogie\OffsetNotDefined;
+use ICanBoogie\OffsetNotWritable;
+use PHPUnit\Framework\TestCase;
+
+class SupplementalTest extends TestCase
 {
 	/**
 	 * @var Supplemental
@@ -84,30 +88,24 @@ class SupplementalTest extends \PHPUnit\Framework\TestCase
         $this->assertFalse(isset($s[uniqid()]));
     }
 
-    /**
-     * @expectedException \ICanBoogie\OffsetNotDefined
-     */
-    public function test_should_throw_exception_when_getting_undefined_offset()
+	public function test_should_throw_exception_when_getting_undefined_offset()
     {
-        $s = self::$supplemental;
+	    $s = self::$supplemental;
+	    $this->expectException(OffsetNotDefined::class);
         $s[uniqid()];
     }
 
-    /**
-     * @expectedException \ICanBoogie\OffsetNotWritable
-     */
-    public function test_should_throw_exception_in_attempt_to_set_offset()
+	public function test_should_throw_exception_in_attempt_to_set_offset()
     {
-        $s = self::$supplemental;
+	    $s = self::$supplemental;
+	    $this->expectException(OffsetNotWritable::class);
         $s['timeData'] = null;
     }
 
-    /**
-     * @expectedException \ICanBoogie\OffsetNotWritable
-     */
-    public function test_should_throw_exception_in_attempt_to_unset_offset()
+	public function test_should_throw_exception_in_attempt_to_unset_offset()
     {
-        $s = self::$supplemental;
+	    $s = self::$supplemental;
+	    $this->expectException(OffsetNotWritable::class);
         unset($s['timeData']);
     }
 }

@@ -2,7 +2,10 @@
 
 namespace ICanBoogie\CLDR;
 
-class ListFormatterTest extends \PHPUnit\Framework\TestCase
+use LogicException;
+use PHPUnit\Framework\TestCase;
+
+class ListFormatterTest extends TestCase
 {
 	/**
 	 * @dataProvider provide_test_format
@@ -56,11 +59,9 @@ class ListFormatterTest extends \PHPUnit\Framework\TestCase
 		];
 	}
 
-	/**
-	 * @expectedException \LogicException
-	 */
 	public function test_localize_without_repository()
 	{
+		$this->expectException(LogicException::class);
 		$formatter = new ListFormatter;
 		$formatter->localize('es');
 	}

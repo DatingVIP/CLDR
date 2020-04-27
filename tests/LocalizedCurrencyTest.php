@@ -11,9 +11,9 @@
 
 namespace ICanBoogie\CLDR;
 
-use function bin2hex;
+use PHPUnit\Framework\TestCase;
 
-class LocalizedCurrencyTest extends \PHPUnit\Framework\TestCase
+class LocalizedCurrencyTest extends TestCase
 {
     use StringHelpers;
 

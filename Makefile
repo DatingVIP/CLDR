@@ -2,7 +2,7 @@
 
 PACKAGE_NAME = icanboogie/cldr
 PACKAGE_VERSION = 4.0
-PHPUNIT_VERSION = phpunit-5.phar
+PHPUNIT_VERSION = phpunit-7.5.phar
 PHPUNIT = build/$(PHPUNIT_VERSION)
 PHPUNIT_COVERAGE=$(PHPUNIT)
 

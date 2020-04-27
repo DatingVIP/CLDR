@@ -11,7 +11,10 @@
 
 namespace ICanBoogie\CLDR;
 
-class TerritoryCollectionTest extends \PHPUnit\Framework\TestCase
+use ICanBoogie\OffsetNotWritable;
+use PHPUnit\Framework\TestCase;
+
+class TerritoryCollectionTest extends TestCase
 {
 	/**
 	 * @var TerritoryCollection
@@ -29,19 +32,15 @@ class TerritoryCollectionTest extends \PHPUnit\Framework\TestCase
 		$this->assertFalse(isset($this->sut['MADONNA']));
 	}
 
-	/**
-	 * @expectedException \ICanBoogie\OffsetNotWritable
-	 */
 	public function test_offsetSet()
 	{
+		$this->expectException(OffsetNotWritable::class);
 		$this->sut['FR'] = null;
 	}
 
-	/**
-	 * @expectedException \ICanBoogie\OffsetNotWritable
-	 */
 	public function test_offsetUnset()
 	{
+		$this->expectException(OffsetNotWritable::class);
 		unset($this->sut['FR']);
 	}
 
@@ -51,13 +50,11 @@ class TerritoryCollectionTest extends \PHPUnit\Framework\TestCase
 		$this->assertInstanceOf(Territory::class, $this->sut['US']);
 	}
 
-    /**
-     * @expectedException \ICanBoogie\CLDR\TerritoryNotDefined
-     * @expectedExceptionMessage Territory not defined for code: MADONNA.
-     */
-    public function test_assert_defined_failure()
+	public function test_assert_defined_failure()
     {
-        $this->sut->assert_defined('MADONNA');
+	    $this->expectExceptionMessage("Territory not defined for code: MADONNA.");
+	    $this->expectException(TerritoryNotDefined::class);
+	    $this->sut->assert_defined('MADONNA');
     }
 
     public function test_assert_defined_success()

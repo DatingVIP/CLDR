@@ -11,7 +11,10 @@
 
 namespace ICanBoogie\CLDR;
 
-class CurrencyCollectionTest extends \PHPUnit\Framework\TestCase
+use ICanBoogie\OffsetNotWritable;
+use PHPUnit\Framework\TestCase;
+
+class CurrencyCollectionTest extends TestCase
 {
 	/**
 	 * @var CurrencyCollection
@@ -39,38 +42,30 @@ class CurrencyCollectionTest extends \PHPUnit\Framework\TestCase
 		$this->assertSame($currency, $this->sut['EUR']);
 	}
 
-	/**
-	 * @expectedException \ICanBoogie\CLDR\CurrencyNotDefined
-     * @expectedExceptionMessage Currency not defined for code: ABC.
-	 */
 	public function test_offset_get_undefined()
 	{
+		$this->expectExceptionMessage("Currency not defined for code: ABC.");
+		$this->expectException(CurrencyNotDefined::class);
 		$this->sut['ABC'];
 	}
 
-	/**
-	 * @expectedException \ICanBoogie\OffsetNotWritable
-	 */
 	public function test_offset_set()
 	{
+		$this->expectException(OffsetNotWritable::class);
 		$this->sut['EUR'] = null;
 	}
 
-	/**
-	 * @expectedException \ICanBoogie\OffsetNotWritable
-	 */
 	public function test_offset_unset()
 	{
+		$this->expectException(OffsetNotWritable::class);
 		unset($this->sut['EUR']);
 	}
 
-    /**
-     * @expectedException \ICanBoogie\CLDR\CurrencyNotDefined
-     * @expectedExceptionMessage Currency not defined for code: MADONNA.
-     */
-    public function test_assert_defined_failure()
+	public function test_assert_defined_failure()
     {
-        $this->sut->assert_defined('MADONNA');
+	    $this->expectExceptionMessage("Currency not defined for code: MADONNA.");
+	    $this->expectException(CurrencyNotDefined::class);
+	    $this->sut->assert_defined('MADONNA');
     }
 
     public function test_assert_defined_success()

@@ -11,7 +11,9 @@
 
 namespace ICanBoogie\CLDR\Provider\WebProvider;
 
-class PathMapperTest extends \PHPUnit\Framework\TestCase
+use PHPUnit\Framework\TestCase;
+
+class PathMapperTest extends TestCase
 {
 	static private $sections = [
 

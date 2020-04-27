@@ -11,7 +11,10 @@
 
 namespace ICanBoogie\CLDR;
 
-class LocaleTest extends \PHPUnit\Framework\TestCase
+use InvalidArgumentException;
+use PHPUnit\Framework\TestCase;
+
+class LocaleTest extends TestCase
 {
     use StringHelpers;
 
@@ -162,11 +165,9 @@ class LocaleTest extends \PHPUnit\Framework\TestCase
 		];
 	}
 
-	/**
-	 * @expectedException \InvalidArgumentException
-	 */
 	public function test_empty_identifier()
 	{
+		$this->expectException(InvalidArgumentException::class);
 		new Locale(get_repository(), '');
 	}
 

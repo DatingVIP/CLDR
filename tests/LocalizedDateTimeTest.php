@@ -12,8 +12,10 @@
 namespace ICanBoogie\CLDR;
 
 use DateTime;
+use ICanBoogie\PropertyNotReadable;
+use PHPUnit\Framework\TestCase;
 
-class LocalizedDateTimeTest extends \PHPUnit\Framework\TestCase
+class LocalizedDateTimeTest extends TestCase
 {
 	/**
 	 * @var LocalizedDateTime[]
@@ -40,14 +42,12 @@ class LocalizedDateTimeTest extends \PHPUnit\Framework\TestCase
 		$this->assertInstanceOf(Locale::class, $ld->locale);
 	}
 
-	/**
-	 * @expectedException \ICanBoogie\PropertyNotReadable
-	 */
 	public function test_get_options()
 	{
 		$ld = self::$localized_dates['en'];
 
-		$this->assertInternalType('array', $ld->options);
+		$this->expectException(PropertyNotReadable::class);
+		$this->assertIsArray($ld->options);
 	}
 
 	public function test_get_formatter()

@@ -11,7 +11,9 @@
 
 namespace ICanBoogie\CLDR;
 
-class CurrencyTest extends \PHPUnit\Framework\TestCase
+use PHPUnit\Framework\TestCase;
+
+class CurrencyTest extends TestCase
 {
 	/**
 	 * @var Repository

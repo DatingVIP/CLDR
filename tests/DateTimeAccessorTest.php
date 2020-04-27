@@ -11,7 +11,10 @@
 
 namespace ICanBoogie\CLDR;
 
-class DateTimeAccessorTest extends \PHPUnit\Framework\TestCase
+use LogicException;
+use PHPUnit\Framework\TestCase;
+
+class DateTimeAccessorTest extends TestCase
 {
 	/**
 	 * @dataProvider provide_test_properties
@@ -44,11 +47,9 @@ class DateTimeAccessorTest extends \PHPUnit\Framework\TestCase
 		];
 	}
 
-	/**
-	 * @expectedException \LogicException
-	 */
 	public function test_should_throw_exception_accessing_undefined_property()
 	{
+		$this->expectException(LogicException::class);
 		$property = uniqid();
 
 		(new DateTimeAccessor(new \DateTime))->$property;

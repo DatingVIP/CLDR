@@ -11,7 +11,9 @@
 
 namespace ICanBoogie\CLDR;
 
-class DateFormatterTest extends \PHPUnit\Framework\TestCase
+use PHPUnit\Framework\TestCase;
+
+class DateFormatterTest extends TestCase
 {
 	/**
 	 * @var DateFormatter[]

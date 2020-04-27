@@ -11,7 +11,9 @@
 
 namespace ICanBoogie\CLDR;
 
-class TimeFormatterTest extends \PHPUnit\Framework\TestCase
+use PHPUnit\Framework\TestCase;
+
+class TimeFormatterTest extends TestCase
 {
 	/**
 	 * @var TimeFormatter[]

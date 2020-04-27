@@ -11,7 +11,11 @@
 
 namespace ICanBoogie\CLDR;
 
-class CalendarCollectionTest extends \PHPUnit\Framework\TestCase
+use BadMethodCallException;
+use ICanBoogie\OffsetNotWritable;
+use PHPUnit\Framework\TestCase;
+
+class CalendarCollectionTest extends TestCase
 {
 	/**
 	 * @var CalendarCollection
@@ -23,27 +27,21 @@ class CalendarCollectionTest extends \PHPUnit\Framework\TestCase
 		self::$collection = get_repository()->locales['fr']->calendars;
 	}
 
-	/**
-	 * @expectedException \BadMethodCallException
-	 */
 	public function test_offsetExists()
 	{
+		$this->expectException(BadMethodCallException::class);
 		self::$collection->offsetExists('gregorian');
 	}
 
-	/**
-	 * @expectedException \ICanBoogie\OffsetNotWritable
-	 */
 	public function test_offsetSet()
 	{
+		$this->expectException(OffsetNotWritable::class);
 		self::$collection['gregorian'] = null;
 	}
 
-	/**
-	 * @expectedException \ICanBoogie\OffsetNotWritable
-	 */
 	public function test_offsetUnset()
 	{
+		$this->expectException(OffsetNotWritable::class);
 		unset(self::$collection['gregorian']);
 	}
 

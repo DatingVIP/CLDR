@@ -11,14 +11,11 @@
 
 namespace ICanBoogie\CLDR;
 
-class LocalizedCurrencyFormatterTest extends \PHPUnit\Framework\TestCase
+use PHPUnit\Framework\TestCase;
+
+class LocalizedCurrencyFormatterTest extends TestCase
 {
     use StringHelpers;
-
-	/**
-	 * @var string
-	 */
-	private $currency;
 
 	/**
 	 * @var CurrencyFormatter
@@ -32,7 +29,6 @@ class LocalizedCurrencyFormatterTest extends \PHPUnit\Framework\TestCase
 
 	public function setUp()
 	{
-		$this->currency = 'IEP';
 		$this->repository = get_repository();
 		$this->formatter = new CurrencyFormatter($this->repository);
 	}

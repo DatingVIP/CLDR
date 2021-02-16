@@ -1,5 +1,5 @@
 {
-	"name": "icanboogie/cldr",
+	"name": "datingvip/cldr",
 	"type": "library",
 	"description": "An API to localize applications using Unicode's CLDR",
 	"keywords": [
@@ -21,8 +21,8 @@
 		}
 	],
 	"support": {
-		"issues": "https://github.com/ICanBoogie/CLDR/issues",
-		"source": "https://github.com/ICanBoogie/CLDR"
+		"issues": "https://github.com/DatingVIP/CLDR/issues",
+		"source": "https://github.com/DatingVIP/CLDR"
 	},
 	"require": {
 		"php": ">=5.6",

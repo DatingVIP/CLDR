@@ -30,7 +30,7 @@
 		"ext-json": "*",
 		"ext-mbstring": "*",
 		"datingvip/common": "^1.2|^2.0",
-		"datingvip/accessor": "^1.0|^2.0|^3.0"
+		"datingvip/accessor": "^1.0|^2.0|^3.0|^4.0"
 	},
 	"require-dev": {
 		"ext-redis": "*"

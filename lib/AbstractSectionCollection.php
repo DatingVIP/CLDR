@@ -54,7 +54,7 @@ abstract class AbstractSectionCollection implements \ArrayAccess
 	/**
 	 * @inheritdoc
 	 */
-	public function offsetExists($offset)
+	public function offsetExists($offset): bool
 	{
 		return isset($this->available_sections[$offset]);
 	}
@@ -62,7 +62,7 @@ abstract class AbstractSectionCollection implements \ArrayAccess
 	/**
 	 * @inheritdoc
 	 */
-	public function offsetGet($offset)
+	public function offsetGet($offset): mixed
 	{
 		$sections = &$this->sections;
 

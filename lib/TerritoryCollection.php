@@ -57,7 +57,7 @@ class TerritoryCollection extends AbstractCollection
      *
      * @return bool `true` if the territory is defined, `false` otherwise.
      */
-	public function offsetExists($territory_code)
+	public function offsetExists($territory_code): bool
 	{
 		$supplemental = $this->repository->supplemental;
 

@@ -59,7 +59,7 @@ class CurrencyCollection extends AbstractCollection
 	 *
 	 * @return bool `true` if the currency is defined, `false' otherwise.
 	 */
-	public function offsetExists($currency_code)
+	public function offsetExists($currency_code): bool
 	{
 		$data = $this->repository->supplemental['currencyData']['region'];
 

@@ -45,7 +45,7 @@ abstract class AbstractCollection implements \ArrayAccess
 	 *
 	 * @throws \BadMethodCallException
 	 */
-	public function offsetExists($id)
+	public function offsetExists($id): bool
 	{
 		throw new \BadMethodCallException("The method is not implemented");
 	}
@@ -53,7 +53,7 @@ abstract class AbstractCollection implements \ArrayAccess
 	/**
 	 * @inheritdoc
 	 */
-	public function offsetGet($id)
+	public function offsetGet($id): mixed
 	{
 		if (empty($this->collection[$id]))
 		{

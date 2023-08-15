@@ -408,10 +408,10 @@ $datetime = '2013-11-02 22:23:45 UTC';
 
 echo $formatter($datetime, "MMM d, y");                 // November 2, 2013
 echo $formatter($datetime, "MMM d, y 'at' hh:mm:ss a"); // November 2, 2013 at 10:23:45 PM
-echo $formatter($datetime, $formatter::WIDHT_FULL);     // Saturday, November 2, 2013 at 10:23:45 PM UTC
-echo $formatter($datetime, $formatter::WIDHT_LONG);     // November 2, 2013 at 10:23:45 PM UTC
-echo $formatter($datetime, $formatter::WIDHT_MEDIUM);   // Nov 2, 2013, 10:23:45 PM
-echo $formatter($datetime, $formatter::WIDHT_SHORT);    // 11/2/13, 10:23 PM
+echo $formatter($datetime, $formatter::WIDTH_FULL);     // Saturday, November 2, 2013 at 10:23:45 PM UTC
+echo $formatter($datetime, $formatter::WIDTH_LONG);     // November 2, 2013 at 10:23:45 PM UTC
+echo $formatter($datetime, $formatter::WIDTH_MEDIUM);   // Nov 2, 2013, 10:23:45 PM
+echo $formatter($datetime, $formatter::WIDTH_SHORT);    // 11/2/13, 10:23 PM
 echo $formatter($datetime, ':Ehm');                     // Sat 10:23 PM
 ```
 

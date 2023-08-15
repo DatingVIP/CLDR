@@ -64,6 +64,8 @@ final class Repository
 	 */
 	private $provider;
 
+	public $locales;
+
 	private function get_provider(): Provider
 	{
 		return $this->provider;

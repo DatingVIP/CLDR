@@ -124,6 +124,7 @@ final class Repository
 	public function __construct(Provider $provider)
 	{
 		$this->provider = $provider;
+		$this->locales = new LocaleCollection($this);
 	}
 
 	/**

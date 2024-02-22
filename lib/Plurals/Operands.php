@@ -26,6 +26,7 @@ use ICanBoogie\CLDR\Number;
  *
  * @see http://unicode.org/reports/tr35/tr35-numbers.html#Operands
  */
+#[\AllowDynamicProperties]
 final class Operands
 {
 	/**

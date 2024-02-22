@@ -42,6 +42,7 @@ use ICanBoogie\CLDR\Numbers\Symbols;
  *
  * @see http://www.unicode.org/repos/cldr-aux/json/24/
  */
+#[\AllowDynamicProperties]
 final class Repository
 {
 	/**

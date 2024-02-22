@@ -21,6 +21,7 @@ use ICanBoogie\CLDR\Units;
  * @property-read string $as_short A short format of the number.
  * @property-read string $as_narrow A narrow format of the number.
  */
+#[\AllowDynamicProperties]
 final class NumberWithUnit
 {
 	/**

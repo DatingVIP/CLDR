@@ -147,6 +147,7 @@ use ICanBoogie\CLDR\Units;
  *
  * @see http://unicode.org/reports/tr35/tr35-general.html#Unit_Sequences
  */
+#[\AllowDynamicProperties]
 final class Sequence
 {
 	/**

@@ -19,6 +19,7 @@ use InvalidArgumentException;
  *
  * @extends AbstractCollection<Locale>
  */
+#[\AllowDynamicProperties]
 class LocaleCollection extends AbstractCollection
 {
 	use AccessorTrait;

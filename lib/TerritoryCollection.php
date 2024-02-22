@@ -29,6 +29,7 @@ use ICanBoogie\Accessor\AccessorTrait;
  *
  * @extends AbstractCollection<Territory>
  */
+#[\AllowDynamicProperties]
 final class TerritoryCollection extends AbstractCollection
 {
 	/**

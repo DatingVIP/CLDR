@@ -20,6 +20,7 @@ use ICanBoogie\Accessor\AccessorTrait;
  *
  * @property-read Locale $locale The locale used by the formatter.
  */
+#[\AllowDynamicProperties]
 abstract class LocalizedObject
 {
 	/**

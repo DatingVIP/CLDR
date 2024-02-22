@@ -40,6 +40,7 @@ use ICanBoogie\CLDR\Numbers\Symbols;
  *
  * @extends ArrayObject<string, mixed>
  */
+#[\AllowDynamicProperties]
 final class Numbers extends ArrayObject
 {
 	/**

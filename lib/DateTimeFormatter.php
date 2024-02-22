@@ -33,6 +33,7 @@ use const STR_PAD_LEFT;
  *
  * @property-read Calendar $calendar The calendar used by the formatter.
  */
+#[\AllowDynamicProperties]
 class DateTimeFormatter implements Formatter
 {
 	/**

@@ -41,6 +41,7 @@ use function substr;
  *
  * @see http://www.unicode.org/reports/tr35/tr35-numbers.html#Supplemental_Currency_Data
  */
+#[\AllowDynamicProperties]
 final class Territory
 {
 	/**

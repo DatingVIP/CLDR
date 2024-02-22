@@ -21,6 +21,7 @@ use function explode;
 /**
  * @implements ArrayAccess<string, array<string, mixed>>
  */
+#[\AllowDynamicProperties]
 abstract class AbstractSectionCollection implements ArrayAccess
 {
 	use AccessorTrait;

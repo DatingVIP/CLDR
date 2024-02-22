@@ -27,6 +27,7 @@ use function is_array;
  *
  * @extends AbstractCollection<Calendar>
  */
+#[\AllowDynamicProperties]
 final class CalendarCollection extends AbstractCollection
 {
 	/**

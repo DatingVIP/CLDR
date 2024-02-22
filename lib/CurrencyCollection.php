@@ -32,6 +32,7 @@ use function key;
  *
  * @extends AbstractCollection<Currency>
  */
+#[\AllowDynamicProperties]
 final class CurrencyCollection extends AbstractCollection
 {
 	/**

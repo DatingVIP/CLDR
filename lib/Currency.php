@@ -39,6 +39,7 @@ use ICanBoogie\Accessor\AccessorTrait;
  *
  * @see http://unicode.org/reports/tr35/tr35-numbers.html#Supplemental_Currency_Data
  */
+#[\AllowDynamicProperties]
 final class Currency
 {
 	public const FRACTION_FALLBACK = 'DEFAULT';

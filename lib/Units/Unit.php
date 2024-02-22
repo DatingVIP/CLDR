@@ -22,6 +22,7 @@ use ICanBoogie\CLDR\Units;
  * @property-read string $short_name
  * @property-read string $narrow_name
  */
+#[\AllowDynamicProperties]
 final class Unit
 {
 	/**

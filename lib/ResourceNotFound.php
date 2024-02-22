@@ -19,6 +19,7 @@ use Throwable;
  *
  * @property-read string $path The path.
  */
+#[\AllowDynamicProperties]
 final class ResourceNotFound extends \Exception implements Exception
 {
 	/**

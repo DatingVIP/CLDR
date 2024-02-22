@@ -20,6 +20,7 @@ use Throwable;
  *
  * @property-read string $territory_code The ISO code of the territory.
  */
+#[\AllowDynamicProperties]
 final class TerritoryNotDefined extends InvalidArgumentException implements Exception
 {
 	/**

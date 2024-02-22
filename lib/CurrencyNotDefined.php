@@ -20,6 +20,7 @@ use Throwable;
  *
  * @property-read string $currency_code The ISO code of the currency.
  */
+#[\AllowDynamicProperties]
 class CurrencyNotDefined extends InvalidArgumentException implements Exception
 {
 	/**

@@ -11,9 +11,7 @@
 
 namespace ICanBoogie\CLDR;
 
-use ICanBoogie\Accessor\AccessorTrait;
 use function abs;
-use function array_key_exists;
 use function implode;
 use function ltrim;
 use function round;

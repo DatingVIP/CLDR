@@ -60,6 +60,7 @@ use function var_dump;
  *
  * @extends ArrayObject<string, mixed>
  */
+#[\AllowDynamicProperties]
 final class Calendar extends ArrayObject
 {
 	public const SHORTHANDS_REGEX = '#^(standalone_)?(abbreviated|narrow|short|wide)_(days|eras|months|quarters)$#';

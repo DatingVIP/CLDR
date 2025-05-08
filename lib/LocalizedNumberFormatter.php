@@ -23,7 +23,7 @@ class LocalizedNumberFormatter extends LocalizedObject implements Formatter
 	 *
 	 * @param float|int $number The number to format.
 	 */
-	public function __invoke($number, string $pattern = null): string
+	public function __invoke($number, ?string $pattern = null): string
 	{
 		return $this->format($number, $pattern);
 	}
@@ -33,7 +33,7 @@ class LocalizedNumberFormatter extends LocalizedObject implements Formatter
 	 *
 	 * @param float|int $number The number to format.
 	 */
-	public function format($number, string $pattern = null): string
+	public function format($number, ?string $pattern = null): string
 	{
 		$numbers = $this->locale->numbers;
 

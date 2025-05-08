@@ -55,7 +55,7 @@ final class Number
 	 *     `$number` has no decimal separator. The fractional part is returned as a string to preserve '03' from
 	 *     '1.03'.
 	 */
-	static public function parse($number, int $precision = null): array
+	static public function parse($number, ?int $precision = null): array
 	{
 		if ($precision === null)
 		{

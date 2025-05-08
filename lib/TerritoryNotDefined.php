@@ -38,7 +38,7 @@ final class TerritoryNotDefined extends InvalidArgumentException implements Exce
         return $this->territory_code;
     }
 
-    public function __construct(string $territory_code, string $message = null, Throwable $previous = null)
+    public function __construct(string $territory_code, ?string $message = null, ?Throwable $previous = null)
     {
         $this->territory_code = $territory_code;
 

@@ -38,7 +38,7 @@ class CurrencyNotDefined extends InvalidArgumentException implements Exception
 		return $this->currency_code;
 	}
 
-	public function __construct(string $currency_code, string $message = null, Throwable $previous = null)
+	public function __construct(string $currency_code, ?string $message = null, ?Throwable $previous = null)
 	{
 		$this->currency_code = $currency_code;
 

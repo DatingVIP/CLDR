@@ -28,7 +28,7 @@ final class CurrencyFormatter extends NumberFormatter
 	public function format(
 		$number,
 		$pattern,
-		Symbols $symbols = null,
+		?Symbols $symbols = null,
 		string $currencySymbol = self::DEFAULT_CURRENCY_SYMBOL
 	): string {
 		return str_replace(

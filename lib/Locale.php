@@ -199,7 +199,7 @@ class Locale extends AbstractSectionCollection
 	 *
 	 * @see LocalizedNumberFormatter::format
 	 */
-	public function format_number($number, string $pattern = null): string
+	public function format_number($number, ?string $pattern = null): string
 	{
 		return $this->number_formatter->format($number, $pattern);
 	}
@@ -209,7 +209,7 @@ class Locale extends AbstractSectionCollection
 	 *
 	 * @see LocalizedNumberFormatter::format
 	 */
-	public function format_percent($number, string $pattern = null): string
+	public function format_percent($number, ?string $pattern = null): string
 	{
 		return $this->number_formatter->format(
 			$number,

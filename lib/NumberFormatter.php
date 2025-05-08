@@ -27,7 +27,7 @@ class NumberFormatter implements Formatter
 	 * @param float|int $number The number to be formatted.
 	 * @param string $pattern The pattern used to format the number.
 	 */
-	public function __invoke($number, string $pattern, Symbols $symbols = null): string
+	public function __invoke($number, string $pattern, ?Symbols $symbols = null): string
 	{
 		return $this->format($number, $pattern, $symbols);
 	}
@@ -41,7 +41,7 @@ class NumberFormatter implements Formatter
 	 * @param float|int $number The number to be formatted.
 	 * @param string|NumberPattern $pattern The pattern used to format the number.
 	 */
-	public function format($number, $pattern, Symbols $symbols = null): string
+	public function format($number, $pattern, ?Symbols $symbols = null): string
 	{
 		if (!$pattern instanceof NumberPattern)
 		{
